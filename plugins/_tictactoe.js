@@ -24,10 +24,10 @@ handler.before = async function (m) {
         }))
         if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
             m.reply({
-                '-3': 'Game telah berakhir',
+                '-3': 'Game has ended',
                 '-2': 'Invalid',
-                '-1': 'Posisi Invalid',
-                0: 'Posisi Invalid',
+                '-1': 'Invalid Position',
+                0: 'Invalid Position',
             }[ok])
             return !0
         }
@@ -61,7 +61,7 @@ ${isWin ? `@${winner.split('@')[0]} Menang! (+${winScore} XP)` : isTie ? `Game b
 
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
-Ketik *nyerah* untuk nyerah
+Type *give up* to give up
 Room ID: ${room.id}
 `.trim()
         let users = global.db.data.users
