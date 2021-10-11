@@ -16,7 +16,7 @@ _${v.subCountLabel} (${v.subCount}) Subscriber_
 ${v.videoCount} video
 `.trim()
     }
-  }).filter(v => v).join('\n========================\n')
+  }).filter(v => v).join('\n\n==============================\n\n')
   m.reply(teks)
 }
 handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
